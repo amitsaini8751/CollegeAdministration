@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"       
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+     xmlns:tx="http://www.springframework.org/schema/tx"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans    
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context 
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd
+     http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+       
+       
+   
+   
+    <mvc:resources mapping="/resources/**" location="/resources/" />
+   
+   
+
+   <context:component-scan base-package = "com.Controller" />
+   <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+   <property name="mappings">
+   <props>
+   <prop key="/">l1</prop>
+    <prop key="/adminlogin">l2</prop>
+     <prop key="/logout">l3</prop>
+      <prop key="/home">l4</prop>
+      <prop key="/newAdmission">l5</prop>
+      <prop key="/return">l6</prop>
+       <prop key="/newAdmissionDataSave">l7</prop>
+       <prop key="/readAdmission">l8</prop>
+       <prop key="/updateAdmission2">l9</prop>
+       <prop key="/updateAdmission1">l10</prop>
+       <prop key="/updateAdmission">l11</prop>
+        <prop key="/deleteAdmission">l12</prop>
+         <prop key="/deleteAdmission1">l13</prop>
+         <prop key="/deleteAdmission2">l14</prop>
+          <prop key="/changePassword">l15</prop>
+          <prop key="/changepassword1">l16</prop>
+          <prop key="/librarianAc">l17</prop>
+           <prop key="/librarianAc1">l18</prop>
+       
+   </props>
+   </property>
+   </bean>
+   <bean id="l1" class="com.Controller.Launch1"></bean>
+   <bean id="l2" class="com.Controller.Launch2"></bean>
+   <bean id="l3" class="com.Controller.Launch3"></bean>
+   <bean id="l4" class="com.Controller.Launch4"></bean>
+   <bean id="l5" class="com.Controller.Launch5"></bean>
+   <bean id="l6" class="com.Controller.Launch6"></bean>
+    <bean id="l7" class="com.Controller.Launch7"></bean>
+     <bean id="l8" class="com.Controller.Launch8"></bean>
+      <bean id="l9" class="com.Controller.Launch9"></bean>
+      <bean id="l10" class="com.Controller.Launch10"></bean>
+       <bean id="l11" class="com.Controller.Launch11"></bean>
+       <bean id="l12" class="com.Controller.Launch12"></bean>
+       <bean id="l13" class="com.Controller.Launch13"></bean>
+       <bean id="l14" class="com.Controller.Launch14"></bean>
+       <bean id="l15" class="com.Controller.Launch15"></bean>
+        <bean id="l16" class="com.Controller.Launch16"></bean>
+         <bean id="l17" class="com.Controller.Launch17"></bean>
+          <bean id="l18" class="com.Controller.Launch18"></bean>
+     
+   
+   
+   
+    
+   
+   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+   <property name="prefix" value="/WEB-INF/views/"></property>
+   <property name="suffix" value=".jsp"></property>
+   
+   
+   
+  
+   </bean>
+   
+    <context:annotation-config/>
+ 
+   
+   </beans>
+   
+   
